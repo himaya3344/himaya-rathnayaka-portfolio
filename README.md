@@ -1,16 +1,48 @@
-# React + Vite
+# Himaya Rathnayaka – Data Analytics Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive personal portfolio showcasing my data analytics, business intelligence, data science, and software development projects.
 
-Currently, two official plugins are available:
+## 🌐 Live Portfolio
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+[View My Portfolio](https://himaya-rathnayaka-portfolio.vercel.app/)
 
-## React Compiler
+## About Me
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+I am a Data Science undergraduate at SLIIT with practical experience in Python, R, SQL, Power BI, data warehousing, ETL, statistical analysis, and machine learning fundamentals.
 
-## Expanding the ESLint configuration
+I am currently seeking Data Analyst and Data Science internship opportunities.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Featured Projects
+
+- E-Commerce Data Warehousing and Business Intelligence
+- Employee Satisfaction and Performance Analysis
+- UniCore Smart Campus Operations Hub
+- AI Movie Recommendation System
+
+## Technologies Used
+
+- React
+- Vite
+- JavaScript
+- HTML5
+- CSS3
+- Git and GitHub
+- Vercel
+
+## Run Locally
+
+```bash
+git clone https://github.com/himaya3344/himaya-rathnayaka-portfolio.git
+cd himaya-rathnayaka-portfolio
+npm install
+npm run dev
+```
+
+## Deployment
+
+Deployed through Vercel with automatic deployment from the `main` branch.
+
+## Contact
+
+- [Portfolio](https://himaya-rathnayaka-portfolio.vercel.app/)
+- [GitHub](https://github.com/himaya3344)
