@@ -2,7 +2,7 @@
 
 A responsive personal portfolio showcasing my data analytics, business intelligence, data science, and software development projects.
 
-## Live Portfolio
+## 🌐 Live Portfolio
 
 [View My Portfolio](https://himaya-rathnayaka-portfolio.vercel.app/)
 
@@ -31,7 +31,18 @@ I am currently seeking Data Analyst and Data Science internship opportunities.
 
 ## Run Locally
 
-Clone the repository:
-
 ```bash
 git clone https://github.com/himaya3344/himaya-rathnayaka-portfolio.git
+cd himaya-rathnayaka-portfolio
+npm install
+npm run dev
+```
+
+## Deployment
+
+Deployed through Vercel with automatic deployment from the `main` branch.
+
+## Contact
+
+- [Portfolio](https://himaya-rathnayaka-portfolio.vercel.app/)
+- [GitHub](https://github.com/himaya3344)
