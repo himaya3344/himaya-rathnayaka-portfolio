@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import "./App.css";
 
 const navigation = [
-   { label: "Home", href: "#home" },
+  { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
@@ -16,62 +16,147 @@ const skills = [
   },
   {
     category: "Data Analysis & Business Intelligence",
-    items: ["Data Cleaning", "EDA", "Statistical Analysis", "Data Visualization", "Predictive Modelling", "Power BI", "Excel", "DAX"],
+    items: [
+      "Data Cleaning",
+      "EDA",
+      "Statistical Analysis",
+      "Data Visualization",
+      "Predictive Modelling",
+      "Power BI",
+      "Excel",
+      "DAX",
+    ],
   },
   {
     category: "Libraries & Frameworks",
-    items: ["Pandas", "NumPy", "Matplotlib", "ggplot2", "Scikit-learn", "Spring Boot", "React", "Express.js", "Tailwind CSS"],
+    items: [
+      "Pandas",
+      "NumPy",
+      "Matplotlib",
+      "ggplot2",
+      "Scikit-learn",
+      "Spring Boot",
+      "React",
+      "Express.js",
+      "Tailwind CSS",
+    ],
   },
   {
     category: "Databases, Tools & Platforms",
-    items: ["SQL Server", "MySQL", "MongoDB", "RStudio", "SSMS", "GitHub", "VS Code", "Figma", "Android Studio"],
+    items: [
+      "SQL Server",
+      "MySQL",
+      "MongoDB",
+      "RStudio",
+      "SSMS",
+      "GitHub",
+      "VS Code",
+      "Figma",
+      "Android Studio",
+    ],
   },
   {
     category: "Core Competencies",
-    items: ["Analytical Thinking", "Insight Generation", "Business Problem Solving", "Dashboard Reporting", "Data Storytelling", "Decision Support"],
+    items: [
+      "Analytical Thinking",
+      "Insight Generation",
+      "Business Problem Solving",
+      "Dashboard Reporting",
+      "Data Storytelling",
+      "Decision Support",
+    ],
   },
 ];
 
 const projects = [
+  
   {
-    category: "BI",
-    type: "Data Warehouse + BI",
-    title: "E-Commerce Data Warehousing & BI",
-    summary:
-      "Turned raw retail data into a dimensional warehouse, SSAS cube, and interactive Power BI reporting workflow.",
-    result:
-      "Enabled sales, customer, product, and time-based analysis through slicers, drill-down, drill-through, and OLAP operations.",
-    tools: ["SQL Server", "SSIS", "SSAS", "Power BI", "DAX"],
-    github: "https://github.com/himaya3344/Ecommerce-Data-Warehouse-BI-Solution",
-    caseStudy: "#case-study",
-    image: "/projects/ecommerce/ecommerce-dashboard.png",
-    imageAlt: "Power BI e-commerce sales dashboard",
-  },
+  category: "BI",
+  type: "Data Warehouse + BI",
+  title: "E-Commerce Data Warehousing & BI",
+  summary:
+    "Built an end-to-end e-commerce data warehouse and BI reporting solution using SQL Server, SSIS, SSAS, and Power BI.",
+  result:
+    "Supported sales, customer, product, and time-based analysis through OLAP operations and interactive dashboards.",
+  highlights: [
+    "Designed a dimensional model with fact tables, dimensions, hierarchies, and Slowly Changing Dimensions.",
+    "Built ETL workflows, SSAS cube, and Power BI reports with slicers, drill-down, and drill-through analysis.",
+  ],
+  tools: ["SQL Server", "SSIS", "SSAS", "Power BI", "Excel", "DAX", "OLAP"],
+  github: "https://github.com/himaya3344/Ecommerce-Data-Warehouse-BI-Solution",
+  caseStudy: "#case-study",
+  image: "/projects/ecommerce/ecommerce-dashboard.png",
+  imageAlt: "Power BI e-commerce sales dashboard",
+},
+{
+  category: "Analysis",
+  type: "Statistical Analysis",
+  title: "Employee Satisfaction & Performance Analysis",
+  summary:
+    "Analyzed the IBM HR Analytics dataset to study how employee satisfaction factors relate to performance.",
+  result:
+    "Found that job satisfaction had a statistically significant effect on employee performance.",
+  highlights: [
+    "Performed data preprocessing, descriptive analysis, and visualizations using R and ggplot2.",
+    "Applied statistical analysis and linear regression to evaluate satisfaction-related performance factors.",
+  ],
+  tools: ["R", "RStudio", "ggplot2", "Statistical Analysis", "Linear Regression"],
+  github: "https://github.com/himaya3344/employee-satisfaction-performance-analysis-r",
+  image: "/projects/employee-analysis/employee-performance-chart.png",
+  imageAlt: "Employee satisfaction and performance analysis chart",
+},
+{
+  category: "Development",
+  type: "Analytics-Enabled System",
+  title: "UniCore - Smart Campus Operations Hub",
+  summary:
+    "Contributed to a smart campus web system supporting facility booking, asset management, and incident reporting workflows.",
+  result:
+    "Improved the incident ticketing module with issue reporting, status tracking, role-based access, and AI-assisted priority suggestions.",
+  highlights: [
+    "Built features for reporting maintenance issues with category, description, contact details, and image attachments.",
+    "Implemented RESTful endpoints, validation, error handling, and keyword-based priority recommendation logic.",
+  ],
+  tools: ["Spring Boot", "React", "REST API", "OAuth 2.0", "GitHub Actions"],
+  github: "https://github.com/Kaveen12/-it3030-paf-2026-smart-campus-group",
+  image: "/projects/unicore/unicore-dashboard.png",
+  imageAlt: "UniCore smart campus operations dashboard",
+},
   {
-    category: "Analysis",
-    type: "Statistical Analysis",
-    title: "Employee Satisfaction & Performance",
+    category: "Development",
+    type: "Full-Stack MERN System",
+    title: "Taste Of Ceylon - Traditional Fruit Management System",
     summary:
-      "Examined how satisfaction factors relate to employee performance using the IBM HR Analytics dataset.",
+      "Built a full-stack fruit supply chain management platform for Sri Lankan fruit businesses using the MERN stack.",
     result:
-      "Applied preprocessing, visualization, chi-square testing, and linear regression; job satisfaction showed a significant effect.",
-    tools: ["R", "RStudio", "ggplot2", "Chi-Square", "Regression"],
-    github: "https://github.com/himaya3344/employee-satisfaction-performance-analysis-r",
-    image: "/projects/employee-analysis/employee-performance-chart.png",
-    imageAlt: "Employee satisfaction and performance analysis chart",
+      "Centralized supplier, inventory, order, finance, and customer engagement workflows to support smoother business operations and reduce wastage.",
+    highlights: [
+      "Implemented CRUD workflows for suppliers, inventory records, orders, finance data, and customer information.",
+      "Designed the system to help local farmers and fruit businesses manage operations from one digital platform.",
+      "Used React, Node.js, Express.js, and MongoDB to build a structured full-stack web application.",
+    ],
+    tools: ["MongoDB", "Express.js", "React", "Node.js", "MERN", "CRUD"],
+    github: "https://github.com/RusinduKasun/ITP_Project_2025",
+    image: "/projects/taste-of-ceylon/taste-of-ceylon-preview.png",
+    imageAlt: "Taste Of Ceylon fruit management system preview",
   },
   {
     category: "Development",
-    type: "Analytics-Enabled System",
-    title: "UniCore - Smart Campus Operations Hub",
+    type: "Android Mobile App",
+    title: "HealthyMe - Personal Wellness Tracking App",
     summary:
-      "Contributed an incident workflow for reporting maintenance issues, attachments, status tracking, and role-based access.",
+      "Designed a personal wellness tracking mobile application to help users monitor daily habits, emotional well-being, and lifestyle routines.",
     result:
-      "Added AI-assisted priority suggestions based on issue descriptions while supporting validation and RESTful endpoints.",
-    tools: ["Spring Boot", "React", "REST API", "OAuth 2.0", "GitHub Actions"],
-    github: "https://github.com/Kaveen12/-it3030-paf-2026-smart-campus-group",
-    image: "/projects/unicore/unicore-dashboard.png",
-imageAlt: "UniCore smart campus operations dashboard",
+      "Encouraged users to stay mindful of daily habits, visualize wellness progress, and take small consistent steps toward a healthier lifestyle.",
+    highlights: [
+      "Designed habit tracking features to support daily self-monitoring and lifestyle improvement.",
+      "Focused on emotional well-being awareness through simple tracking and reflection features.",
+      "Built the mobile application using Android Studio and Kotlin with a clean user-friendly interface.",
+    ],
+    tools: ["Android Studio", "Kotlin", "Mobile App", "UI/UX", "Wellness Tracking"],
+    github: "https://github.com/himaya3344/healthyme-android-app",
+    image: "/projects/healthyme/healthyme-preview.png",
+    imageAlt: "HealthyMe wellness tracking mobile app preview",
   },
 ];
 
@@ -164,7 +249,8 @@ function App() {
 
   useEffect(() => {
     const updateProgress = () => {
-      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollable =
+        document.documentElement.scrollHeight - window.innerHeight;
       setScrollProgress(scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0);
     };
 
@@ -175,6 +261,7 @@ function App() {
 
   const closeMenu = () => setMenuOpen(false);
   const cvUrl = `${import.meta.env.BASE_URL}Himaya_Rathnayaka_CV.pdf`;
+
   return (
     <>
       <div className="scrollProgress" style={{ width: `${scrollProgress}%` }} />
@@ -182,8 +269,8 @@ function App() {
       <header className="siteHeader">
         <nav className="nav" aria-label="Primary navigation">
           <a href="#home" className="logo" onClick={closeMenu} aria-label="Home">
-  HR<span></span>
-</a>
+            HR<span></span>
+          </a>
 
           <button
             className="menuButton"
@@ -251,8 +338,8 @@ function App() {
                 View Projects
               </a>
               <a href={cvUrl} download="Himaya_Rathnayaka_CV.pdf">
-  Download CV
-</a>
+                Download CV
+              </a>
               <a
                 href="https://github.com/himaya3344"
                 target="_blank"
@@ -276,14 +363,28 @@ function App() {
                 <span className="panelKicker">Portfolio overview</span>
                 <h3>analytics_profile.sql</h3>
               </div>
-              <span className="liveStatus"><i /> Available</span>
+              <span className="liveStatus">
+                <i /> Available
+              </span>
             </div>
 
             <div className="statsGrid">
-              <div><strong>3+</strong><span>Data Projects</span></div>
-              <div><strong>3.45</strong><span>Current GPA</span></div>
-              <div><strong>10+</strong><span>Tools & Technologies</span></div>
-              <div><strong>Open</strong><span>Internship Status</span></div>
+              <div>
+                <strong>5+</strong>
+                <span>Projects</span>
+              </div>
+              <div>
+                <strong>3.45</strong>
+                <span>Current GPA</span>
+              </div>
+              <div>
+                <strong>10+</strong>
+                <span>Tools & Technologies</span>
+              </div>
+              <div>
+                <strong>Open</strong>
+                <span>Internship Status</span>
+              </div>
             </div>
 
             <div className="focusChart">
@@ -381,7 +482,9 @@ function App() {
               <article className="skillGroup" key={skill.category}>
                 <h3>{skill.category}</h3>
                 <div className="skillTags">
-                  {skill.items.map((item) => <span key={item}>{item}</span>)}
+                  {skill.items.map((item) => (
+                    <span key={item}>{item}</span>
+                  ))}
                 </div>
               </article>
             ))}
@@ -394,7 +497,7 @@ function App() {
             <h2>Work that shows the full thinking process.</h2>
             <p>
               Each project explains the problem, the method, and the outcome, with
-              direct access to the source repository.
+              direct access to the source repository where available.
             </p>
           </div>
 
@@ -426,16 +529,30 @@ function App() {
                   <p className="projectType">{project.type}</p>
                   <h3>{project.title}</h3>
                   <p>{project.summary}</p>
-                  <p className="projectResult"><strong>Outcome:</strong> {project.result}</p>
+                  <p className="projectResult">
+                    <strong>Outcome:</strong> {project.result}
+                  </p>
+
+                  {project.highlights && (
+                    <ul className="projectHighlights">
+                      {project.highlights.map((point) => (
+                        <li key={point}>{point}</li>
+                      ))}
+                    </ul>
+                  )}
 
                   <div className="projectTags">
-                    {project.tools.map((tool) => <span key={tool}>{tool}</span>)}
+                    {project.tools.map((tool) => (
+                      <span key={tool}>{tool}</span>
+                    ))}
                   </div>
 
                   <div className="projectActions">
-                    <a href={project.github} target="_blank" rel="noreferrer">
-                      GitHub Repository
-                    </a>
+                    {project.github && (
+                      <a href={project.github} target="_blank" rel="noreferrer">
+                        GitHub Repository
+                      </a>
+                    )}
                     {project.caseStudy && <a href={project.caseStudy}>View Case Study</a>}
                   </div>
                 </div>
@@ -456,10 +573,26 @@ function App() {
 
           <div className="caseFlow">
             {[
-              ["01", "Model", "Designed a star schema with FactSales and reusable product, customer, date, device, and referral dimensions."],
-              ["02", "Transform", "Built ordered SSIS workflows to validate, clean, and load data into the warehouse."],
-              ["03", "Analyze", "Created an SSAS cube with measures, dimensions, hierarchies, and OLAP exploration."],
-              ["04", "Communicate", "Delivered Power BI reports with slicers, matrix views, drill-down, and drill-through."],
+              [
+                "01",
+                "Model",
+                "Designed a star schema with FactSales and reusable product, customer, date, device, and referral dimensions.",
+              ],
+              [
+                "02",
+                "Transform",
+                "Built ordered SSIS workflows to validate, clean, and load data into the warehouse.",
+              ],
+              [
+                "03",
+                "Analyze",
+                "Created an SSAS cube with measures, dimensions, hierarchies, and OLAP exploration.",
+              ],
+              [
+                "04",
+                "Communicate",
+                "Delivered Power BI reports with slicers, matrix views, drill-down, and drill-through.",
+              ],
             ].map(([number, title, text]) => (
               <article key={number}>
                 <span>{number}</span>
@@ -471,15 +604,24 @@ function App() {
 
           <div className="caseGallery">
             <figure>
-              <img src="/projects/ecommerce/ecommerce-data-model.png" alt="E-commerce dimensional data model" />
+              <img
+                src="/projects/ecommerce/ecommerce-data-model.png"
+                alt="E-commerce dimensional data model"
+              />
               <figcaption>Dimensional data model</figcaption>
             </figure>
             <figure>
-              <img src="/projects/ecommerce/dashboard.png" alt="Interactive e-commerce Power BI dashboard" />
+              <img
+                src="/projects/ecommerce/dashboard.png"
+                alt="Interactive e-commerce Power BI dashboard"
+              />
               <figcaption>Interactive Power BI dashboard</figcaption>
             </figure>
             <figure>
-              <img src="/projects/ecommerce/ecommerce-drillthrough.png" alt="Power BI drill-through report" />
+              <img
+                src="/projects/ecommerce/ecommerce-drillthrough.png"
+                alt="Power BI drill-through report"
+              />
               <figcaption>Detailed drill-through analysis</figcaption>
             </figure>
           </div>
@@ -509,32 +651,40 @@ function App() {
 
         <section id="contact" className="section contactSection">
           <div className="contactIntro">
-  <p className="eyebrow">Let&apos;s Connect</p>
+            <p className="eyebrow">Let&apos;s Connect</p>
 
-  <h2>Open to opportunities, collaborations, and meaningful data problems.</h2>
+            <h2>Open to opportunities, collaborations, and meaningful data problems.</h2>
 
-  <p>
-    I&apos;m Himaya Rathnayaka, a Data Science undergraduate at SLIIT and an
-    aspiring Data Analyst. I&apos;m interested in internships, Research
-    collaborations, and conversations about analytics, business intelligence,
-    dashboards, and practical data solutions.
-  </p>
+            <p>
+              I&apos;m Himaya Rathnayaka, a Data Science undergraduate at SLIIT and
+              an aspiring Data Analyst. I&apos;m interested in internships, research
+              collaborations, and conversations about analytics, business
+              intelligence, dashboards, and practical data solutions.
+            </p>
 
-  <p>
-    Based in Malabe, Colombo, Sri Lanka. Feel free to reach out  I&apos;d be
-    happy to connect.
-  </p>
-</div>
+            <p>
+              Based in Malabe, Colombo, Sri Lanka. Feel free to reach out — I&apos;d
+              be happy to connect.
+            </p>
+          </div>
 
           <div className="contactLinks">
             <a className="emailLink" href="mailto:rathnayakatharukihimaya@gmail.com">
               rathnayakatharukihimaya@gmail.com
             </a>
             <a href={cvUrl} download="Himaya_Rathnayaka_CV.pdf">
-  Download CV
-</a>
-            <a href="https://github.com/himaya3344" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/himaya-rathnayaka-54527a3a9" target="_blank" rel="noreferrer">LinkedIn</a>
+              Download CV
+            </a>
+            <a href="https://github.com/himaya3344" target="_blank" rel="noreferrer">
+              GitHub
+            </a>
+            <a
+              href="https://www.linkedin.com/in/himaya-rathnayaka-54527a3a9"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
           </div>
         </section>
       </main>
