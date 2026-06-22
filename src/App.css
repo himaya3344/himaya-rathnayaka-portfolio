@@ -10,7 +10,7 @@
   --accent: #24d2c6;
   --accent-soft: rgba(36, 210, 198, 0.1);
   --header-height: 68px;
-  --content-max: 1440px;
+  --content-max: 1300px;
   color: var(--text);
   background: var(--bg);
   font-family: Inter, "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
