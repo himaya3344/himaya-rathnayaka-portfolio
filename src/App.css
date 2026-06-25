@@ -1641,3 +1641,76 @@ footer {
   padding: 7px 11px;
   font-size: 12px;
 }
+
+/* FINAL mobile project section fix - keep this at the very bottom */
+@media (max-width: 860px) {
+  .projectGrid {
+    grid-template-columns: 1fr !important;
+    gap: 22px;
+  }
+
+  .projectCard {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .projectMedia {
+    aspect-ratio: 16 / 8.5;
+  }
+
+  .projectBody {
+    padding: 18px;
+  }
+
+  .projectType {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    word-break: normal;
+    overflow-wrap: normal;
+  }
+
+  .projectBody h3 {
+    font-size: 22px !important;
+    line-height: 1.25;
+    word-break: normal;
+    overflow-wrap: normal;
+    hyphens: none;
+  }
+
+  .projectBody > p:not(.projectType),
+  .projectHighlights {
+    font-size: 14px;
+    line-height: 1.65;
+    word-break: normal;
+    overflow-wrap: normal;
+    hyphens: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .projectFilters {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .projectFilters button {
+    width: 100%;
+  }
+
+  .projectMedia {
+    aspect-ratio: 16 / 9;
+  }
+
+  .projectBody h3 {
+    font-size: 21px !important;
+  }
+
+  .projectTags {
+    gap: 6px;
+  }
+
+  .projectActions {
+    gap: 8px;
+  }
+}
